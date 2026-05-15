@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -43,12 +44,13 @@
       box-shadow:0 8px 30px rgba(0,0,0,0.3);
     }
 
-    /* Floating hearts */
+    /* Floating Hearts */
     .heart{
       position:fixed;
       color:rgba(255,255,255,0.15);
       animation:float linear infinite;
       z-index:-1;
+      user-select:none;
     }
 
     .heart:nth-child(1){
@@ -100,7 +102,7 @@
     }
 
     .hero-card{
-      max-width:1100px;
+      max-width:1150px;
       width:100%;
       border-radius:35px;
       overflow:hidden;
@@ -109,7 +111,7 @@
     }
 
     .hero-image{
-      min-height:500px;
+      min-height:600px;
       background:url('images/nontando-main.jpg') center/cover no-repeat;
       position:relative;
     }
@@ -118,7 +120,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      background:linear-gradient(to top, rgba(0,0,0,0.65), transparent);
     }
 
     .hero-content{
@@ -174,13 +176,7 @@
       box-shadow:0 15px 30px rgba(255,0,102,0.45);
     }
 
-    /* Gallery */
-    .gallery{
-      padding:100px 20px;
-      max-width:1300px;
-      margin:auto;
-    }
-
+    /* SECTIONS */
     .section-title{
       text-align:center;
       margin-bottom:60px;
@@ -193,6 +189,13 @@
 
     .section-title p{
       color:#bbb;
+    }
+
+    /* GALLERY */
+    .gallery{
+      padding:100px 20px;
+      max-width:1300px;
+      margin:auto;
     }
 
     .gallery-grid{
@@ -240,7 +243,66 @@
       transform:translateY(-10px);
     }
 
-    /* Message Section */
+    /* WHATSAPP MEMORIES */
+    .chat-memories{
+      padding:20px 20px 100px;
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .chat-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .chat-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:30px;
+      height:550px;
+      transition:0.4s ease;
+    }
+
+    .chat-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:0.5s ease;
+    }
+
+    .chat-overlay{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      padding:25px;
+      background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.1)
+      );
+    }
+
+    .chat-overlay h3{
+      margin-bottom:8px;
+      font-size:1.2rem;
+    }
+
+    .chat-overlay p{
+      color:#d6d6d6;
+      font-size:0.95rem;
+      line-height:1.6;
+    }
+
+    .chat-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .chat-card:hover img{
+      transform:scale(1.05);
+    }
+
+    /* MESSAGE */
     .message-section{
       padding:40px 20px 120px;
     }
@@ -275,7 +337,7 @@
       font-size:1.08rem;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer{
       padding:30px 20px;
       text-align:center;
@@ -287,7 +349,7 @@
       color:#ff4d88;
     }
 
-    /* Mobile */
+    /* MOBILE */
     @media(max-width:768px){
 
       .hero h1{
@@ -310,19 +372,24 @@
       .section-title h2{
         font-size:2.2rem;
       }
+
+      .chat-card{
+        height:450px;
+      }
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Floating Hearts -->
+  <!-- FLOATING HEARTS -->
   <div class="heart">❤</div>
   <div class="heart">❤</div>
   <div class="heart">❤</div>
   <div class="heart">❤</div>
   <div class="heart">❤</div>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
 
     <div class="hero-card glass">
@@ -357,7 +424,7 @@
 
   </section>
 
-  <!-- GALLERY -->
+  <!-- PHOTO GALLERY -->
   <section class="gallery">
 
     <div class="section-title">
@@ -368,26 +435,84 @@
     <div class="gallery-grid">
 
       <div class="gallery-card glass">
-        <img src="images/nontando1.jpg" alt="">
+        <img src="images/nontando1.jpg" alt="Memory 1">
       </div>
 
       <div class="gallery-card glass">
-        <img src="images/nontando2.jpg" alt="">
+        <img src="images/nontando2.jpg" alt="Memory 2">
       </div>
 
       <div class="gallery-card glass">
-        <img src="images/nontando3.jpg" alt="">
+        <img src="images/nontando3.jpg" alt="Memory 3">
       </div>
 
       <div class="gallery-card glass">
-        <img src="images/nontando4.jpg" alt="">
+        <img src="images/nontando4.jpg" alt="Memory 4">
       </div>
 
     </div>
 
   </section>
 
-  <!-- MESSAGE -->
+  <!-- WHATSAPP MEMORIES -->
+  <section class="chat-memories">
+
+    <div class="section-title">
+      <h2>Our WhatsApp Memories 💬</h2>
+      <p>Little conversations that mean the world to me.</p>
+    </div>
+
+    <div class="chat-grid">
+
+      <div class="chat-card glass">
+        <img src="images/screenshot1.jpg" alt="Chat Screenshot 1">
+
+        <div class="chat-overlay">
+          <h3>Late Night Talks 🌙</h3>
+          <p>
+            Conversations I never wanted to end.
+          </p>
+        </div>
+      </div>
+
+      <div class="chat-card glass">
+        <img src="images/screenshot2.jpg" alt="Chat Screenshot 2">
+
+        <div class="chat-overlay">
+          <h3>Funny Moments 😂</h3>
+          <p>
+            The chats that always make me smile.
+          </p>
+        </div>
+      </div>
+
+      <div class="chat-card glass">
+        <img src="images/screenshot3.jpg" alt="Chat Screenshot 3">
+
+        <div class="chat-overlay">
+          <h3>Sweet Messages ❤️</h3>
+          <p>
+            Every word from you means everything to me.
+          </p>
+        </div>
+      </div>
+
+      <div class="chat-card glass">
+        <img src="images/screenshot4.jpg" alt="Chat Screenshot 4">
+
+        <div class="chat-overlay">
+          <h3>Forever Memories ✨</h3>
+          <p>
+            Moments I’ll always treasure.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- APPRECIATION MESSAGE -->
   <section class="message-section">
 
     <div class="message-box glass">

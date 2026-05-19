@@ -34,7 +34,7 @@
       position:fixed;
       inset:0;
       background:
-      radial-gradient(circle at top left, rgba(0,255,200,0.15), transparent 25%),
+      radial-gradient(circle at top left, rgba(255,0,128,0.15), transparent 25%),
       radial-gradient(circle at bottom right, rgba(0,140,255,0.15), transparent 25%),
       radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 45%);
       z-index:-5;
@@ -52,9 +52,10 @@
     .heart{
       position:absolute;
       bottom:-100px;
-      color:rgba(255,255,255,0.15);
+      color:rgba(255,255,255,0.18);
       animation:floatUp linear infinite;
       user-select:none;
+      text-shadow:0 0 15px rgba(255,0,128,0.5);
     }
 
     .heart:nth-child(1){
@@ -136,7 +137,7 @@
     .blur1{
       width:350px;
       height:350px;
-      background:#00ffc8;
+      background:#ff0080;
       top:-120px;
       left:-120px;
     }
@@ -179,25 +180,25 @@
     }
 
     .logo{
-      font-size:1.6rem;
+      font-size:1.7rem;
       font-weight:700;
       letter-spacing:1px;
     }
 
     .logo span{
-      color:#00ffc8;
+      color:#ff4da6;
     }
 
     .music-btn{
       padding:14px 24px;
       border:none;
       border-radius:60px;
-      background:linear-gradient(135deg,#00ffc8,#008cff);
+      background:linear-gradient(135deg,#ff0080,#008cff);
       color:white;
       font-weight:600;
       cursor:pointer;
       transition:0.35s ease;
-      box-shadow:0 10px 30px rgba(0,255,200,0.25);
+      box-shadow:0 10px 30px rgba(255,0,128,0.25);
     }
 
     .music-btn:hover{
@@ -216,7 +217,7 @@
     .hero-card{
       width:100%;
       max-width:1000px;
-      padding:85px 60px;
+      padding:90px 60px;
       border-radius:45px;
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
@@ -231,11 +232,11 @@
     .hero-card::before{
       content:"";
       position:absolute;
-      width:300px;
-      height:300px;
-      background:linear-gradient(135deg,#00ffc8,#008cff);
+      width:320px;
+      height:320px;
+      background:linear-gradient(135deg,#ff0080,#008cff);
       border-radius:50%;
-      filter:blur(140px);
+      filter:blur(150px);
       top:-120px;
       right:-120px;
       opacity:0.3;
@@ -244,14 +245,14 @@
     .hero-card::after{
       content:"";
       position:absolute;
-      width:250px;
-      height:250px;
-      background:#00ffc8;
+      width:260px;
+      height:260px;
+      background:#ff4da6;
       border-radius:50%;
       filter:blur(120px);
       bottom:-120px;
       left:-100px;
-      opacity:0.18;
+      opacity:0.2;
     }
 
     .tag{
@@ -260,7 +261,7 @@
       border-radius:60px;
       background:rgba(255,255,255,0.08);
       border:1px solid rgba(255,255,255,0.08);
-      color:#86ffe8;
+      color:#ff9ccc;
       letter-spacing:2px;
       font-size:0.9rem;
       margin-bottom:35px;
@@ -275,8 +276,8 @@
 
     .hero h1 span{
       font-family:'Great Vibes',cursive;
-      color:#00ffc8;
-      font-size:6.3rem;
+      color:#ff4da6;
+      font-size:6.5rem;
     }
 
     .hero p{
@@ -306,9 +307,9 @@
     }
 
     .btn-primary{
-      background:linear-gradient(135deg,#00ffc8,#008cff);
+      background:linear-gradient(135deg,#ff0080,#008cff);
       color:white;
-      box-shadow:0 15px 35px rgba(0,255,200,0.25);
+      box-shadow:0 15px 35px rgba(255,0,128,0.25);
     }
 
     .btn-secondary{
@@ -321,7 +322,7 @@
       transform:translateY(-5px) scale(1.03);
     }
 
-    /* SECTION */
+    /* MESSAGE SECTION */
     .messages{
       padding:100px 0;
     }
@@ -363,7 +364,7 @@
       inset:0;
       background:linear-gradient(
         135deg,
-        rgba(0,255,200,0.12),
+        rgba(255,0,128,0.12),
         rgba(0,140,255,0.10)
       );
       opacity:0;
@@ -448,10 +449,10 @@
     }
 
     footer span{
-      color:#00ffc8;
+      color:#ff4da6;
     }
 
-    /* HIDDEN YOUTUBE PLAYER */
+    /* HIDDEN PLAYER */
     .youtube-player{
       position:fixed;
       width:0;
@@ -543,7 +544,7 @@
       <div class="hero-card">
 
         <div class="tag">
-          FOR THE MOST BEAUTIFUL GIRL ❤️
+          GOOD MORNING MY LOVE ❤️
         </div>
 
         <h1>
@@ -596,7 +597,6 @@
       <div class="message-grid">
 
         <div class="message-card">
-
           <span class="emoji">😍</span>
 
           <h3>Your Beauty</h3>
@@ -606,11 +606,9 @@
             inside and out.
             Your smile alone makes my entire day better.
           </p>
-
         </div>
 
         <div class="message-card">
-
           <span class="emoji">💖</span>
 
           <h3>Your Love</h3>
@@ -621,11 +619,9 @@
             and genuine.
             You make my heart feel safe and happy.
           </p>
-
         </div>
 
         <div class="message-card">
-
           <span class="emoji">🌍</span>
 
           <h3>My Choice</h3>
@@ -637,11 +633,9 @@
             tomorrow,
             and forever.
           </p>
-
         </div>
 
         <div class="message-card">
-
           <span class="emoji">☀️</span>
 
           <h3>My Future</h3>
@@ -651,7 +645,6 @@
             make memories together,
             and experience life by your side.
           </p>
-
         </div>
 
       </div>
@@ -710,11 +703,11 @@
       const iframe = document.getElementById("ytMusic");
 
       iframe.src =
-      "https://www.youtube.com/embed/KW3tG1mPFhQ?autoplay=1&loop=1&playlist=KW3tG1mPFhQ";
+      "https://www.youtube.com/embed/3y0rLDDNPpU?autoplay=1&loop=1&playlist=3y0rLDDNPpU";
 
       const button = document.querySelector(".music-btn");
 
-      button.innerHTML = "🎵 Playing Our Song ❤️";
+      button.innerHTML = "🎵 Now Playing Our Song ❤️";
 
     }
 

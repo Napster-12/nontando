@@ -40,7 +40,7 @@
       z-index:-5;
     }
 
-    /* FLOATING LOVE ICONS */
+    /* FLOATING HEARTS */
     .floating-hearts{
       position:fixed;
       inset:0;
@@ -123,7 +123,7 @@
 
     }
 
-    /* GLOW BLURS */
+    /* GLOW EFFECTS */
     .blur{
       position:absolute;
       border-radius:50%;
@@ -174,6 +174,8 @@
       justify-content:space-between;
       align-items:center;
       padding:20px 0;
+      gap:20px;
+      flex-wrap:wrap;
     }
 
     .logo{
@@ -186,14 +188,20 @@
       color:#00ffc8;
     }
 
-    .music-badge{
-      padding:12px 22px;
-      border-radius:50px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(12px);
+    .music-btn{
+      padding:14px 24px;
+      border:none;
+      border-radius:60px;
+      background:linear-gradient(135deg,#00ffc8,#008cff);
       color:white;
-      font-size:0.95rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.35s ease;
+      box-shadow:0 10px 30px rgba(0,255,200,0.25);
+    }
+
+    .music-btn:hover{
+      transform:translateY(-4px) scale(1.03);
     }
 
     /* HERO */
@@ -443,8 +451,8 @@
       color:#00ffc8;
     }
 
-    /* YOUTUBE MUSIC */
-    .youtube-music{
+    /* HIDDEN YOUTUBE PLAYER */
+    .youtube-player{
       position:fixed;
       width:0;
       height:0;
@@ -506,11 +514,11 @@
   <div class="blur blur1"></div>
   <div class="blur blur2"></div>
 
-  <!-- BACKGROUND MUSIC -->
-  <!-- Replace VIDEO_ID with the actual YouTube video ID -->
+  <!-- HIDDEN YOUTUBE PLAYER -->
   <iframe
-    class="youtube-music"
-    src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID"
+    id="ytMusic"
+    class="youtube-player"
+    frameborder="0"
     allow="autoplay">
   </iframe>
 
@@ -523,9 +531,9 @@
         Morning<span>Love</span> ❤️
       </div>
 
-      <div class="music-badge">
-        🎵 Skhanda Love Playing
-      </div>
+      <button class="music-btn" onclick="playMusic()">
+        ▶ Play Our Song ❤️
+      </button>
 
     </nav>
 
@@ -693,6 +701,24 @@
   <footer>
     Made with <span>❤</span> for Nontando — My Forever Choice
   </footer>
+
+  <!-- MUSIC SCRIPT -->
+  <script>
+
+    function playMusic(){
+
+      const iframe = document.getElementById("ytMusic");
+
+      iframe.src =
+      "https://www.youtube.com/embed/KW3tG1mPFhQ?autoplay=1&loop=1&playlist=KW3tG1mPFhQ";
+
+      const button = document.querySelector(".music-btn");
+
+      button.innerHTML = "🎵 Playing Our Song ❤️";
+
+    }
+
+  </script>
 
 </body>
 </html>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ss">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Good Morning Nontando ❤️</title>
+  <title>Ekuseni Lokuhle Nontando 🤍</title>
 
-  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
 
@@ -21,188 +18,86 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background:#07111d;
-      color:white;
-      overflow-x:hidden;
-      position:relative;
       min-height:100vh;
+      overflow-x:hidden;
+      background:#0b0b0b;
+      color:#f5f5f5;
     }
 
-    /* BACKGROUND */
+    /* SOFT BLACK GLOW BACKGROUND */
     body::before{
       content:"";
       position:fixed;
       inset:0;
       background:
-      radial-gradient(circle at top left, rgba(255,0,128,0.15), transparent 25%),
-      radial-gradient(circle at bottom right, rgba(0,140,255,0.15), transparent 25%),
-      radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 45%);
-      z-index:-5;
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
+      z-index:-2;
     }
 
-    /* FLOATING HEARTS */
+    /* FLOATING HEARTS (GRAY ONLY) */
     .floating-hearts{
       position:fixed;
       inset:0;
-      overflow:hidden;
       pointer-events:none;
-      z-index:-2;
+      z-index:-1;
     }
 
     .heart{
       position:absolute;
       bottom:-100px;
-      color:rgba(255,255,255,0.18);
-      animation:floatUp linear infinite;
-      user-select:none;
-      text-shadow:0 0 15px rgba(255,0,128,0.5);
-    }
-
-    .heart:nth-child(1){
-      left:5%;
-      font-size:24px;
-      animation-duration:10s;
-    }
-
-    .heart:nth-child(2){
-      left:15%;
-      font-size:40px;
-      animation-duration:14s;
-    }
-
-    .heart:nth-child(3){
-      left:28%;
       font-size:20px;
-      animation-duration:11s;
-    }
-
-    .heart:nth-child(4){
-      left:40%;
-      font-size:35px;
-      animation-duration:16s;
-    }
-
-    .heart:nth-child(5){
-      left:52%;
-      font-size:26px;
-      animation-duration:13s;
-    }
-
-    .heart:nth-child(6){
-      left:64%;
-      font-size:32px;
-      animation-duration:15s;
-    }
-
-    .heart:nth-child(7){
-      left:76%;
-      font-size:24px;
-      animation-duration:12s;
-    }
-
-    .heart:nth-child(8){
-      left:88%;
-      font-size:38px;
-      animation-duration:18s;
+      color:rgba(255,255,255,0.15);
+      animation:floatUp 12s linear infinite;
     }
 
     @keyframes floatUp{
-
-      0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:0;
-      }
-
-      10%{
-        opacity:1;
-      }
-
-      100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-      }
-
+      0%{transform:translateY(0);opacity:0;}
+      10%{opacity:1;}
+      100%{transform:translateY(-120vh);opacity:0;}
     }
 
-    /* GLOW EFFECTS */
-    .blur{
-      position:absolute;
-      border-radius:50%;
-      filter:blur(120px);
-      opacity:0.35;
-      z-index:-3;
-      animation:moveGlow 10s ease-in-out infinite alternate;
-    }
-
-    .blur1{
-      width:350px;
-      height:350px;
-      background:#ff0080;
-      top:-120px;
-      left:-120px;
-    }
-
-    .blur2{
-      width:320px;
-      height:320px;
-      background:#008cff;
-      bottom:-120px;
-      right:-120px;
-    }
-
-    @keyframes moveGlow{
-      from{
-        transform:translateY(0px);
-      }
-      to{
-        transform:translateY(40px);
-      }
-    }
-
-    /* CONTAINER */
     .container{
-      width:100%;
       max-width:1200px;
       margin:auto;
       padding:30px;
-      position:relative;
-      z-index:2;
     }
 
-    /* NAVBAR */
+    /* NAV */
     .navbar{
       display:flex;
       justify-content:space-between;
       align-items:center;
       padding:20px 0;
-      gap:20px;
-      flex-wrap:wrap;
     }
 
     .logo{
-      font-size:1.7rem;
+      font-size:1.8rem;
       font-weight:700;
       letter-spacing:1px;
+      color:#fff;
     }
 
     .logo span{
-      color:#ff4da6;
+      color:#cfcfcf;
     }
 
+    /* BUTTON */
     .music-btn{
-      padding:14px 24px;
+      padding:14px 26px;
       border:none;
-      border-radius:60px;
-      background:linear-gradient(135deg,#ff0080,#008cff);
-      color:white;
-      font-weight:600;
+      border-radius:50px;
+      background:#1a1a1a;
+      color:#fff;
+      border:1px solid #333;
       cursor:pointer;
-      transition:0.35s ease;
-      box-shadow:0 10px 30px rgba(255,0,128,0.25);
+      transition:0.3s ease;
     }
 
     .music-btn:hover{
-      transform:translateY(-4px) scale(1.03);
+      background:#2a2a2a;
+      transform:scale(1.05);
     }
 
     /* HERO */
@@ -216,502 +111,155 @@
 
     .hero-card{
       width:100%;
-      max-width:1000px;
-      padding:90px 60px;
-      border-radius:45px;
-      background:rgba(255,255,255,0.05);
+      max-width:900px;
+      padding:80px 50px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.03);
       border:1px solid rgba(255,255,255,0.08);
       backdrop-filter:blur(20px);
-      box-shadow:
-      0 20px 60px rgba(0,0,0,0.35),
-      inset 0 1px 1px rgba(255,255,255,0.06);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      width:320px;
-      height:320px;
-      background:linear-gradient(135deg,#ff0080,#008cff);
-      border-radius:50%;
-      filter:blur(150px);
-      top:-120px;
-      right:-120px;
-      opacity:0.3;
-    }
-
-    .hero-card::after{
-      content:"";
-      position:absolute;
-      width:260px;
-      height:260px;
-      background:#ff4da6;
-      border-radius:50%;
-      filter:blur(120px);
-      bottom:-120px;
-      left:-100px;
-      opacity:0.2;
+      box-shadow:0 20px 60px rgba(0,0,0,0.6);
     }
 
     .tag{
       display:inline-block;
-      padding:12px 24px;
-      border-radius:60px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.08);
-      color:#ff9ccc;
+      padding:10px 20px;
+      border-radius:50px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      color:#ddd;
       letter-spacing:2px;
-      font-size:0.9rem;
-      margin-bottom:35px;
+      font-size:0.85rem;
+      margin-bottom:25px;
     }
 
     .hero h1{
-      font-size:5rem;
+      font-size:4rem;
       line-height:1.1;
-      margin-bottom:25px;
-      font-weight:700;
+      margin-bottom:20px;
+      color:#fff;
     }
 
     .hero h1 span{
       font-family:'Great Vibes',cursive;
-      color:#ff4da6;
-      font-size:6.5rem;
+      font-size:5.5rem;
+      color:#e6e6e6;
     }
 
     .hero p{
-      max-width:780px;
-      margin:auto;
-      color:#d6d6d6;
-      line-height:2.2;
-      font-size:1.08rem;
-      margin-bottom:45px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
+      color:#cfcfcf;
+      line-height:2;
+      font-size:1.05rem;
+      margin-top:20px;
     }
 
     .btn{
-      padding:16px 36px;
-      border:none;
-      border-radius:60px;
-      font-size:1rem;
-      font-weight:600;
+      padding:15px 32px;
+      border-radius:50px;
+      border:1px solid #444;
       cursor:pointer;
-      transition:0.35s ease;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,#ff0080,#008cff);
-      color:white;
-      box-shadow:0 15px 35px rgba(255,0,128,0.25);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.08);
-      color:white;
+      font-weight:600;
+      transition:0.3s ease;
+      margin:10px;
+      background:#111;
+      color:#fff;
     }
 
     .btn:hover{
-      transform:translateY(-5px) scale(1.03);
+      background:#222;
+      transform:translateY(-4px);
     }
 
-    /* MESSAGE SECTION */
-    .messages{
-      padding:100px 0;
-    }
-
-    .section-title{
+    /* SECTIONS */
+    section{
+      padding:70px 0;
       text-align:center;
-      margin-bottom:60px;
     }
 
-    .section-title h2{
-      font-size:3rem;
-      margin-bottom:15px;
+    h2{
+      font-size:2.5rem;
+      margin-bottom:10px;
+      color:#fff;
     }
 
-    .section-title p{
+    p{
       color:#bdbdbd;
-    }
-
-    .message-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-    }
-
-    .message-card{
-      padding:35px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      transition:0.4s ease;
-      backdrop-filter:blur(14px);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .message-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(
-        135deg,
-        rgba(255,0,128,0.12),
-        rgba(0,140,255,0.10)
-      );
-      opacity:0;
-      transition:0.4s ease;
-    }
-
-    .message-card:hover::before{
-      opacity:1;
-    }
-
-    .message-card:hover{
-      transform:translateY(-12px);
-      border-color:rgba(255,255,255,0.18);
-    }
-
-    .emoji{
-      font-size:2.3rem;
-      margin-bottom:20px;
-      display:block;
-      position:relative;
-      z-index:1;
-    }
-
-    .message-card h3{
-      font-size:1.35rem;
-      margin-bottom:15px;
-      position:relative;
-      z-index:1;
-    }
-
-    .message-card p{
-      color:#d5d5d5;
-      line-height:1.9;
-      position:relative;
-      z-index:1;
-    }
-
-    /* NOTE */
-    .love-note{
-      padding-bottom:120px;
-    }
-
-    .note-box{
-      max-width:920px;
-      margin:auto;
-      padding:80px 55px;
-      border-radius:40px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      text-align:center;
-      backdrop-filter:blur(18px);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .note-box::before{
-      content:"❤";
-      position:absolute;
-      font-size:12rem;
-      opacity:0.05;
-      top:-10px;
-      left:20px;
-    }
-
-    .note-box h2{
-      font-size:3rem;
-      margin-bottom:30px;
-    }
-
-    .note-box p{
-      color:#d8d8d8;
-      line-height:2.2;
-      font-size:1.08rem;
     }
 
     /* FOOTER */
     footer{
-      padding:30px;
       text-align:center;
-      color:#9d9d9d;
+      padding:30px;
+      color:#888;
       border-top:1px solid rgba(255,255,255,0.08);
     }
 
     footer span{
-      color:#ff4da6;
-    }
-
-    /* HIDDEN PLAYER */
-    .youtube-player{
-      position:fixed;
-      width:0;
-      height:0;
-      opacity:0;
-      pointer-events:none;
-    }
-
-    /* MOBILE */
-    @media(max-width:768px){
-
-      .container{
-        padding:20px;
-      }
-
-      .hero-card{
-        padding:60px 28px;
-      }
-
-      .hero h1{
-        font-size:3rem;
-      }
-
-      .hero h1 span{
-        font-size:4.2rem;
-      }
-
-      .hero p{
-        font-size:1rem;
-      }
-
-      .section-title h2,
-      .note-box h2{
-        font-size:2.2rem;
-      }
-
-      .note-box{
-        padding:55px 25px;
-      }
-
+      color:#fff;
     }
 
   </style>
 </head>
+
 <body>
 
-  <!-- FLOATING HEARTS -->
-  <div class="floating-hearts">
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-    <div class="heart">❤</div>
-  </div>
+<div class="floating-hearts">
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+</div>
 
-  <!-- GLOW EFFECTS -->
-  <div class="blur blur1"></div>
-  <div class="blur blur2"></div>
+<div class="container">
 
-  <!-- HIDDEN YOUTUBE PLAYER -->
-  <iframe
-    id="ytMusic"
-    class="youtube-player"
-    frameborder="0"
-    allow="autoplay">
-  </iframe>
+  <nav class="navbar">
+    <div class="logo">Ekuseni<span>Lutsandvo</span> 🤍</div>
+    <button class="music-btn">▶ Dlala Ingoma 🤍</button>
+  </nav>
 
-  <div class="container">
+  <section class="hero">
+    <div class="hero-card">
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+      <div class="tag">EKUSENI LOKUHLE STHANDWA SAM 🤍</div>
 
-      <div class="logo">
-        Morning<span>Love</span> ❤️
+      <h1>
+        Ekuseni Lokuhle <br>
+        <span>Nontando 🤍</span>
+      </h1>
+
+      <p>
+        Ngiyakutsandza kakhulu 🤍<br><br>
+
+        Wena uyincazelo yami yempilo, injabulo kanye nekuthula.<br>
+        Ngitawuhlale ngakukhetsa — namuhla, kusasa, njalo njalo.<br><br>
+
+        Inhlitiyo yami ihlale ikuwe kuphela 🤍
+      </p>
+
+      <div style="margin-top:25px;">
+        <button class="btn">Ngikukhetsa Njalo 🤍</button>
+        <button class="btn">Uthando Lwami Phakadze ✨</button>
       </div>
 
-      <button class="music-btn" onclick="playMusic()">
-        ▶ Play Our Song ❤️
-      </button>
+    </div>
+  </section>
 
-    </nav>
+  <section>
+    <h2>Ngiyakutsandza Ngani 🤍</h2>
+    <p>Wenta impilo yami ibe nekuthula kanye nenjabulo.</p>
+  </section>
 
-    <!-- HERO -->
-    <section class="hero">
+  <section>
+    <h2>Umlayeto 🤍</h2>
+    <p>
+      Ngitawuhlale ngakutsandza, ngikusekele, futsi ngikukhetse njalo 🤍
+    </p>
+  </section>
 
-      <div class="hero-card">
+</div>
 
-        <div class="tag">
-          GOOD MORNING MY LOVE ❤️
-        </div>
-
-        <h1>
-          Good Morning <br>
-          <span>Nontando ❤️</span>
-        </h1>
-
-        <p>
-          You are the real definition of beautiful.
-          Everything about you feels special to me —
-          your smile, your heart, your energy,
-          and the way you make my world brighter every single day.<br><br>
-
-          I will always choose you —
-          today, tomorrow, and every day after that.
-          No matter where life takes us,
-          my heart will always belong to you ❤️<br><br>
-
-          I can’t wait to be with you,
-          hold you close,
-          laugh with you,
-          and create beautiful memories together.
-          I love you endlessly beautiful ❤️
-        </p>
-
-        <div class="hero-buttons">
-
-          <button class="btn btn-primary">
-            I Choose You Always ❤️
-          </button>
-
-          <button class="btn btn-secondary">
-            Forever My Favorite Person ✨
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- MESSAGE SECTION -->
-    <section class="messages">
-
-      <div class="section-title">
-        <h2>Why I Love You ✨</h2>
-        <p>You make life feel more beautiful every day.</p>
-      </div>
-
-      <div class="message-grid">
-
-        <div class="message-card">
-          <span class="emoji">😍</span>
-
-          <h3>Your Beauty</h3>
-
-          <p>
-            You are truly the definition of beautiful,
-            inside and out.
-            Your smile alone makes my entire day better.
-          </p>
-        </div>
-
-        <div class="message-card">
-          <span class="emoji">💖</span>
-
-          <h3>Your Love</h3>
-
-          <p>
-            Loving you feels peaceful,
-            warm,
-            and genuine.
-            You make my heart feel safe and happy.
-          </p>
-        </div>
-
-        <div class="message-card">
-          <span class="emoji">🌍</span>
-
-          <h3>My Choice</h3>
-
-          <p>
-            If I had to choose all over again,
-            I would still choose you —
-            today,
-            tomorrow,
-            and forever.
-          </p>
-        </div>
-
-        <div class="message-card">
-          <span class="emoji">☀️</span>
-
-          <h3>My Future</h3>
-
-          <p>
-            I can’t wait to spend more time with you,
-            make memories together,
-            and experience life by your side.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- LOVE NOTE -->
-    <section class="love-note">
-
-      <div class="note-box">
-
-        <h2>A Message From My Heart 💌</h2>
-
-        <p>
-          Good morning my love ❤️ <br><br>
-
-          Before your day begins,
-          I just want you to know how deeply loved and appreciated you are.
-          You bring peace into my life,
-          happiness into my heart,
-          and warmth into my soul.<br><br>
-
-          You are not just beautiful —
-          you are the true meaning of beauty to me.
-          Every moment with you feels special,
-          and every thought of you makes me smile.<br><br>
-
-          I will always choose you,
-          support you,
-          care for you,
-          and love you with all my heart —
-          today,
-          tomorrow,
-          and every single day after that ❤️<br><br>
-
-          Enjoy your day beautiful.
-          I love you endlessly ❤️
-        </p>
-
-      </div>
-
-    </section>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    Made with <span>❤</span> for Nontando — My Forever Choice
-  </footer>
-
-  <!-- MUSIC SCRIPT -->
-  <script>
-
-    function playMusic(){
-
-      const iframe = document.getElementById("ytMusic");
-
-      iframe.src =
-      "https://www.youtube.com/embed/3y0rLDDNPpU?autoplay=1&loop=1&playlist=3y0rLDDNPpU";
-
-      const button = document.querySelector(".music-btn");
-
-      button.innerHTML = "🎵 Now Playing Our Song ❤️";
-
-    }
-
-  </script>
+<footer>
+  Kwentiwe nge <span>🤍</span> kuNontando — Ngikukhetsa Phakadze
+</footer>
 
 </body>
 </html>

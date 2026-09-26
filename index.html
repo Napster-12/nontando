@@ -1,200 +1,467 @@
+```html
 <!DOCTYPE html>
-<html lang="ss">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ekuseni Lokuhle Nontando 🤍</title>
+
+  <title>For Thando Nosindiso 🤍</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family:'Poppins',sans-serif;
-      min-height:100vh;
-      overflow-x:hidden;
-      background:#0b0b0b;
-      color:#f5f5f5;
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: #0b0b0b;
+      color: #f5f5f5;
     }
 
-    /* SOFT BLACK GLOW BACKGROUND */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
+    /* SOFT BACKGROUND GLOW */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
       background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 40%),
-        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
-      z-index:-2;
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255,255,255,0.08),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(255,255,255,0.05),
+          transparent 45%
+        ),
+        radial-gradient(
+          circle at 50% 80%,
+          rgba(255,255,255,0.03),
+          transparent 50%
+        );
+
+      z-index: -2;
     }
 
-    /* FLOATING HEARTS (GRAY ONLY) */
-    .floating-hearts{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-1;
+    /* FLOATING HEARTS */
+    .floating-hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
     }
 
-    .heart{
-      position:absolute;
-      bottom:-100px;
-      font-size:20px;
-      color:rgba(255,255,255,0.15);
-      animation:floatUp 12s linear infinite;
+    .heart {
+      position: absolute;
+      bottom: -100px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.15);
+      animation: floatUp 12s linear infinite;
     }
 
-    @keyframes floatUp{
-      0%{transform:translateY(0);opacity:0;}
-      10%{opacity:1;}
-      100%{transform:translateY(-120vh);opacity:0;}
+    .heart:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+      font-size: 18px;
     }
 
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:30px;
+    .heart:nth-child(2) {
+      left: 35%;
+      animation-delay: 3s;
+      font-size: 25px;
     }
 
-    /* NAV */
-    .navbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 0;
+    .heart:nth-child(3) {
+      left: 65%;
+      animation-delay: 6s;
+      font-size: 16px;
     }
 
-    .logo{
-      font-size:1.8rem;
-      font-weight:700;
-      letter-spacing:1px;
-      color:#fff;
+    .heart:nth-child(4) {
+      left: 85%;
+      animation-delay: 9s;
+      font-size: 22px;
     }
 
-    .logo span{
-      color:#cfcfcf;
+    @keyframes floatUp {
+
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
     }
 
-    /* BUTTON */
-    .music-btn{
-      padding:14px 26px;
-      border:none;
-      border-radius:50px;
-      background:#1a1a1a;
-      color:#fff;
-      border:1px solid #333;
-      cursor:pointer;
-      transition:0.3s ease;
+    /* MAIN CONTAINER */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px;
     }
 
-    .music-btn:hover{
-      background:#2a2a2a;
-      transform:scale(1.05);
+    /* NAVIGATION */
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #cfcfcf;
+      font-weight: 400;
+    }
+
+    /* MUSIC BUTTON */
+
+    .music-btn {
+      padding: 12px 22px;
+      border: 1px solid #333;
+      border-radius: 50px;
+      background: #1a1a1a;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .music-btn:hover {
+      background: #2a2a2a;
+      transform: scale(1.05);
     }
 
     /* HERO */
-    .hero{
-      min-height:90vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    .hero-card{
-      width:100%;
-      max-width:900px;
-      padding:80px 50px;
-      border-radius:20px;
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(20px);
-      box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    .hero-card {
+      width: 100%;
+      max-width: 900px;
+      padding: 80px 50px;
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,0.035);
+
+      border: 1px solid rgba(255,255,255,0.09);
+
+      backdrop-filter: blur(20px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.6);
     }
 
-    .tag{
-      display:inline-block;
-      padding:10px 20px;
-      border-radius:50px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      color:#ddd;
-      letter-spacing:2px;
-      font-size:0.85rem;
-      margin-bottom:25px;
+    /* TAG */
+
+    .tag {
+      display: inline-block;
+
+      padding: 10px 20px;
+
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      color: #ddd;
+
+      letter-spacing: 2px;
+
+      font-size: 0.8rem;
+
+      margin-bottom: 25px;
     }
 
-    .hero h1{
-      font-size:4rem;
-      line-height:1.1;
-      margin-bottom:20px;
-      color:#fff;
+    /* HERO TITLE */
+
+    .hero h1 {
+      font-size: 3.8rem;
+      line-height: 1.15;
+      margin-bottom: 25px;
+      color: #fff;
     }
 
-    .hero h1 span{
-      font-family:'Great Vibes',cursive;
-      font-size:5.5rem;
-      color:#e6e6e6;
+    .hero h1 span {
+      display: block;
+
+      font-family: 'Great Vibes', cursive;
+
+      font-size: 5.5rem;
+
+      color: #e6e6e6;
+
+      margin-top: 10px;
     }
 
-    .hero p{
-      color:#cfcfcf;
-      line-height:2;
-      font-size:1.05rem;
-      margin-top:20px;
+    /* HERO MESSAGE */
+
+    .hero-message {
+      color: #cfcfcf;
+
+      line-height: 2;
+
+      font-size: 1.05rem;
+
+      margin: 25px auto;
+
+      max-width: 700px;
     }
 
-    .btn{
-      padding:15px 32px;
-      border-radius:50px;
-      border:1px solid #444;
-      cursor:pointer;
-      font-weight:600;
-      transition:0.3s ease;
-      margin:10px;
-      background:#111;
-      color:#fff;
+    .hero-message strong {
+      color: #fff;
     }
 
-    .btn:hover{
-      background:#222;
-      transform:translateY(-4px);
+    /* BUTTONS */
+
+    .btn-container {
+      margin-top: 35px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+
+      border-radius: 50px;
+
+      border: 1px solid #444;
+
+      cursor: pointer;
+
+      font-weight: 600;
+
+      transition: 0.3s ease;
+
+      margin: 8px;
+
+      background: #111;
+
+      color: #fff;
+    }
+
+    .btn:hover {
+      background: #222;
+
+      transform: translateY(-4px);
     }
 
     /* SECTIONS */
-    section{
-      padding:70px 0;
-      text-align:center;
+
+    section {
+      padding: 80px 0;
+
+      text-align: center;
     }
 
-    h2{
-      font-size:2.5rem;
-      margin-bottom:10px;
-      color:#fff;
+    h2 {
+      font-size: 2.5rem;
+
+      margin-bottom: 20px;
+
+      color: #fff;
     }
 
-    p{
-      color:#bdbdbd;
+    .section-text {
+      max-width: 750px;
+
+      margin: auto;
+
+      color: #bdbdbd;
+
+      line-height: 2;
+
+      font-size: 1rem;
+    }
+
+    /* APPRECIATION CARDS */
+
+    .appreciation-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 20px;
+
+      margin-top: 40px;
+    }
+
+    .appreciation-card {
+      padding: 30px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,0.03);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      transition: 0.3s ease;
+    }
+
+    .appreciation-card:hover {
+      transform: translateY(-6px);
+
+      background: rgba(255,255,255,0.06);
+    }
+
+    .appreciation-card .icon {
+      font-size: 2rem;
+
+      margin-bottom: 15px;
+    }
+
+    .appreciation-card h3 {
+      margin-bottom: 10px;
+
+      color: #fff;
+    }
+
+    .appreciation-card p {
+      color: #aaa;
+
+      line-height: 1.8;
+
+      font-size: 0.9rem;
+    }
+
+    /* MESSAGE SECTION */
+
+    .letter {
+      max-width: 850px;
+
+      margin: auto;
+
+      padding: 50px;
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,0.025);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      text-align: left;
+
+      line-height: 2;
+
+      color: #cfcfcf;
+    }
+
+    .letter p {
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      margin-top: 35px;
+
+      text-align: right;
+
+      font-family: 'Great Vibes', cursive;
+
+      font-size: 3rem;
+
+      color: #fff;
     }
 
     /* FOOTER */
-    footer{
-      text-align:center;
-      padding:30px;
-      color:#888;
-      border-top:1px solid rgba(255,255,255,0.08);
+
+    footer {
+      text-align: center;
+
+      padding: 35px;
+
+      color: #888;
+
+      border-top:
+        1px solid rgba(255,255,255,0.08);
+
+      margin-top: 40px;
     }
 
-    footer span{
-      color:#fff;
+    footer span {
+      color: #fff;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      .container {
+        padding: 20px;
+      }
+
+      .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding: 70px 0;
+      }
+
+      .hero-card {
+        padding: 55px 25px;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero h1 span {
+        font-size: 4rem;
+      }
+
+      .hero-message {
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .letter {
+        padding: 30px 25px;
+      }
+
+      .signature {
+        font-size: 2.5rem;
+      }
+
     }
 
   </style>
@@ -202,64 +469,404 @@
 
 <body>
 
-<div class="floating-hearts">
-  <div class="heart">❤</div>
-  <div class="heart">❤</div>
-  <div class="heart">❤</div>
-  <div class="heart">❤</div>
-</div>
+  <!-- FLOATING HEARTS -->
 
-<div class="container">
+  <div class="floating-hearts">
 
-  <nav class="navbar">
-    <div class="logo">Ekuseni<span>Lutsandvo</span> 🤍</div>
-    <button class="music-btn">▶ Dlala Ingoma 🤍</button>
-  </nav>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
 
-  <section class="hero">
-    <div class="hero-card">
+  </div>
 
-      <div class="tag">EKUSENI LOKUHLE STHANDWA SAM 🤍</div>
 
-      <h1>
-        Ekuseni Lokuhle <br>
-        <span>Nontando 🤍</span>
-      </h1>
+  <div class="container">
 
-      <p>
-        Ngiyakutsandza kakhulu 🤍<br><br>
+    <!-- NAVIGATION -->
 
-        Wena uyincazelo yami yempilo, injabulo kanye nekuthula.<br>
-        Ngitawuhlale ngakukhetsa — namuhla, kusasa, njalo njalo.<br><br>
+    <nav class="navbar">
 
-        Inhlitiyo yami ihlale ikuwe kuphela 🤍
-      </p>
-
-      <div style="margin-top:25px;">
-        <button class="btn">Ngikukhetsa Njalo 🤍</button>
-        <button class="btn">Uthando Lwami Phakadze ✨</button>
+      <div class="logo">
+        With <span>Love</span> 🤍
       </div>
 
-    </div>
-  </section>
+      <button
+        class="music-btn"
+        onclick="playMusic()">
 
-  <section>
-    <h2>Ngiyakutsandza Ngani 🤍</h2>
-    <p>Wenta impilo yami ibe nekuthula kanye nenjabulo.</p>
-  </section>
+        ▶ Play Our Song 🤍
 
-  <section>
-    <h2>Umlayeto 🤍</h2>
-    <p>
-      Ngitawuhlale ngakutsandza, ngikusekele, futsi ngikukhetse njalo 🤍
-    </p>
-  </section>
+      </button>
 
-</div>
+    </nav>
 
-<footer>
-  Kwentiwe nge <span>🤍</span> kuNontando — Ngikukhetsa Phakadze
-</footer>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-card">
+
+        <div class="tag">
+          A MESSAGE FROM MY HEART 🤍
+        </div>
+
+
+        <h1>
+
+          To My Beautiful
+
+          <span>
+            Thando Nosindiso 🤍
+          </span>
+
+        </h1>
+
+
+        <div class="hero-message">
+
+          <strong>Thank you for being you.</strong>
+
+          <br><br>
+
+          I want you to know how deeply I appreciate
+          having you in my life.
+
+          <br><br>
+
+          Thank you for your love, your support,
+          your patience, your kindness, and for all
+          the little things you do that make my days
+          better.
+
+          <br><br>
+
+          You are someone I never want to take for granted. 🤍
+
+        </div>
+
+
+        <div class="btn-container">
+
+          <button class="btn"
+            onclick="showMessage()">
+
+            You Mean So Much To Me 🤍
+
+          </button>
+
+          <button class="btn"
+            onclick="scrollToLetter()">
+
+            Read My Letter ✨
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- APPRECIATION -->
+
+    <section>
+
+      <h2>
+        Why I Appreciate You 🤍
+      </h2>
+
+      <p class="section-text">
+
+        There are so many reasons why you are
+        special to me. These are just a few of them.
+
+      </p>
+
+
+      <div class="appreciation-grid">
+
+
+        <div class="appreciation-card">
+
+          <div class="icon">
+            🤍
+          </div>
+
+          <h3>Your Kindness</h3>
+
+          <p>
+
+            Your kindness makes the people around
+            you feel valued, cared for, and appreciated.
+
+          </p>
+
+        </div>
+
+
+        <div class="appreciation-card">
+
+          <div class="icon">
+            ✨
+          </div>
+
+          <h3>Your Support</h3>
+
+          <p>
+
+            Thank you for standing beside me,
+            encouraging me, and believing in me.
+
+          </p>
+
+        </div>
+
+
+        <div class="appreciation-card">
+
+          <div class="icon">
+            🌙
+          </div>
+
+          <h3>Your Presence</h3>
+
+          <p>
+
+            Sometimes you don't even have to say
+            anything. Just having you around makes
+            things feel better.
+
+          </p>
+
+        </div>
+
+
+        <div class="appreciation-card">
+
+          <div class="icon">
+            ♡
+          </div>
+
+          <h3>Your Heart</h3>
+
+          <p>
+
+            I appreciate the person you are,
+            your heart, your character, and the
+            way you care for the people you love.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- PERSONAL LETTER -->
+
+    <section id="letter">
+
+      <h2>
+        A Letter For You 🤍
+      </h2>
+
+
+      <div class="letter">
+
+        <p>
+          My dearest Thando,
+        </p>
+
+
+        <p>
+
+          I just wanted to take a moment to tell you
+          something that I may not say often enough:
+          <strong>I appreciate you.</strong>
+
+        </p>
+
+
+        <p>
+
+          I appreciate every conversation, every laugh,
+          every moment of support, and every little
+          memory we continue to create together.
+
+        </p>
+
+
+        <p>
+
+          Thank you for being patient with me.
+          Thank you for listening to me.
+          Thank you for encouraging me.
+          Thank you for being there during both the
+          good days and the difficult ones.
+
+        </p>
+
+
+        <p>
+
+          I appreciate the way you make me feel
+          comfortable being myself. I appreciate
+          the happiness you bring into my life and
+          the peace that comes from knowing that
+          there is someone who genuinely cares.
+
+        </p>
+
+
+        <p>
+
+          I know that no relationship is perfect,
+          and I don't expect perfection. What matters
+          to me is the effort, understanding, honesty,
+          respect, and love that we continue to give
+          each other.
+
+        </p>
+
+
+        <p>
+
+          If I don't always say it enough, please
+          remember this:
+
+          <strong>
+            You matter to me.
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          I am grateful for you, grateful for our
+          journey, and grateful for every moment
+          that has brought us closer.
+
+        </p>
+
+
+        <p>
+
+          Thank you for being part of my life,
+          Thando Nosindiso.
+
+        </p>
+
+
+        <p>
+
+          I love you, I appreciate you, and I will
+          never stop being grateful for you. 🤍
+
+        </p>
+
+
+        <div class="signature">
+
+          With all my love,<br>
+
+          Codnell 🤍
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL MESSAGE -->
+
+    <section>
+
+      <h2>
+        One More Thing... 🤍
+      </h2>
+
+      <p class="section-text">
+
+        If you ever wonder how much you mean to me,
+        come back to this page and remember:
+
+        <br><br>
+
+        <strong style="color:#fff; font-size:1.2rem;">
+
+          You are appreciated.<br>
+          You are valued.<br>
+          You are loved.<br>
+          And you are very special to me. 🤍
+
+        </strong>
+
+      </p>
+
+    </section>
+
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    Made with <span>🤍</span>
+    for Thando Nosindiso
+
+    <br>
+
+    <small>
+      A little reminder of how much you are appreciated.
+    </small>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function showMessage() {
+
+      alert(
+        "Thando, I appreciate you more than words can explain. Thank you for being part of my life. 🤍"
+      );
+
+    }
+
+
+    function scrollToLetter() {
+
+      document
+        .getElementById("letter")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+    function playMusic() {
+
+      alert(
+        "Add your favourite song to the page and connect it to this button. 🤍"
+      );
+
+    }
+
+  </script>
 
 </body>
 </html>
+```
